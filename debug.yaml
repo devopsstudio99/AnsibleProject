@@ -1,0 +1,10 @@
+---
+-
+  name: Test ping
+  hosts: serv1
+  tasks:
+    - name: Test ping
+      ping:
+    - name: debug ping
+      debug: msg="ping done"
+

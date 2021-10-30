@@ -1,0 +1,6 @@
+-
+  name:  extravar
+  hosts: serv1
+  tasks:
+    - name: debug
+      debug: msg="Print variable var1 is {{ var1 }}"

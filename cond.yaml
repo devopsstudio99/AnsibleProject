@@ -1,0 +1,16 @@
+-
+  name: Install httpd
+  hosts: serv1
+  tasks:
+  - name: Install web server Ubuntu
+    apt: 
+      name: httpd
+      state: present
+    when: ansible_os_family == "Ubuntu"
+
+  - name: Install web server RedHat
+    yum: 
+      name: httpd
+      state: present
+    when: ansible_os_family == "RedHat" and
+           ansible_distribution_version == "7.9"

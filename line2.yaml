@@ -1,0 +1,7 @@
+-
+  name: Add DNS server
+  hosts: serv1
+  tasks:
+   - lineinfile:
+       path: /etc/resolv.conf
+       line: 'nameserver 8.8.8.9'

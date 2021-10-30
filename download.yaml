@@ -1,0 +1,13 @@
+-
+  name: download 
+  hosts: serv1
+  tasks:
+    - name: download README.md
+      get_url:
+        url: https://raw.githubusercontent.com/devopsstudio99/docker/master/README.md
+        dest: /tmp/
+        mode: '0440'
+    - name: "list file"
+      command: "ls -l /tmp/README.md"
+
+

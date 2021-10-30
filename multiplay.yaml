@@ -1,0 +1,16 @@
+---
+-
+  name: Test ping
+  hosts: serv1
+  tasks:
+    - name: Test ping
+      ping:
+    - name: sleep
+      pause:
+        seconds: 5
+-
+  name: Test ping
+  hosts: serv2
+  tasks:
+    - name: Test ping
+      ping:

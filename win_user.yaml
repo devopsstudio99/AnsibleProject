@@ -1,0 +1,11 @@
+-
+  name: add user
+  hosts: win1
+  tasks:
+    - name: Ensure user bob is present
+      win_user:
+        name: bob
+        password: Password123
+        state: present
+        groups:
+          - Users

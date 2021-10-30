@@ -1,0 +1,9 @@
+-
+  name: Add DNS server
+  hosts: serv1
+  vars: 
+    dns_server: 4.4.4.4
+  tasks:
+   - lineinfile:
+       path: /etc/resolv.conf
+       line: 'nameserver {{ dns_server }}'

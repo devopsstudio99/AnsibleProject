@@ -1,0 +1,8 @@
+-
+  name:  extravar
+  hosts: serv1
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: debug
+      debug: msg="Print variable var1 is {{ var1 }}"
